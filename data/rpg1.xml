@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+
+<!DOCTYPE catalog[
+        <!ELEMENT catalog (classes,weapons)>
+        <!ELEMENT classes (class+)>
+        <!ELEMENT class (name,armour,speed)>
+        <!ATTLIST class id ID #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT armour (#PCDATA)>
+        <!ELEMENT speed (#PCDATA)>
+        <!ELEMENT weapons (weapon+)>
+        <!ELEMENT weapon (w_name,damage,range)>
+        <!ATTLIST weapon type IDREF #REQUIRED>
+        <!ELEMENT w_name (#PCDATA)>
+        <!ELEMENT damage (#PCDATA)>
+        <!ATTLIST damage type_mage NMTOKEN #FIXED "true">
+        <!ELEMENT range (#PCDATA)>
+        ]>
+
+<catalog>
+    <classes>
+        <class id="id_1">
+            <name>Knight</name>
+            <armour>10</armour>
+            <speed>240</speed>
+        </class>
+        <class id="id_2">
+            <name>Archer</name>
+            <armour>6</armour>
+            <speed>300</speed>
+        </class>
+        <class id="id_3">
+            <name>Mage</name>
+            <armour>5</armour>
+            <speed>315</speed>
+        </class>
+        <class id="id_4">
+            <name>Assassin</name>
+            <armour>7</armour>
+            <speed>280</speed>
+        </class>
+    </classes>
+    <weapons>
+        <weapon type="id_1">
+            <w_name>Steel sword</w_name>
+            <damage>50</damage>
+            <range>90</range>
+        </weapon>
+        <weapon type="id_1">
+            <w_name>King's sword</w_name>
+            <damage>100</damage>
+            <range>100</range>
+        </weapon>
+        <weapon type="id_2">
+            <w_name>Long bow</w_name>
+            <damage>38</damage>
+            <range>200</range>
+        </weapon>
+        <weapon type="id_2">
+            <w_name>King's bow</w_name>
+            <damage>70</damage>
+            <range>250</range>
+        </weapon>
+        <weapon type="id_3">
+            <w_name>Steel staff</w_name>
+            <damage type_mage="true">65</damage>
+            <range>140</range>
+        </weapon>
+        <weapon type="id_3">
+            <w_name>King's staff</w_name>
+            <damage type_mage="true">85</damage>
+            <range>170</range>
+        </weapon>
+        <weapon type="id_4">
+            <w_name>Steel cathars</w_name>
+            <damage >90</damage>
+            <range>50</range>
+        </weapon>
+        <weapon type="id_4">
+            <w_name>King's cathars</w_name>
+            <damage>120</damage>
+            <range>80</range>
+        </weapon>
+    </weapons>
+</catalog>
